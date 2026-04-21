@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)file:///C:/Users/nirva/Downloads/apex-research-vault_1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Research and Ventures</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./Apex Research and Ventures_files/css2" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0C0C10;--ink2:#1C1C24;
+  --gold:#C9A84C;--gold2:#E8C97A;
+  --cream:#F7F4EE;--cream2:#EDE8DF;--cream3:#DDD6C8;
+  --silver:#8C8C96;--silver2:#B4B4BE;
+  --white:#FFFFFF;
+  --fd:'Cormorant Garamond',serif;
+  --fu:'Syne',sans-serif;
+  --fm:'JetBrains Mono',monospace;
+  --r:6px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--fu);overflow-x:hidden}
+button{font-family:var(--fu);cursor:pointer}
+input,textarea,select{font-family:var(--fu)}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--cream)}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(12,12,16,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,.15);display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px}
+.nb{display:flex;align-items:baseline;gap:.6rem;cursor:pointer}
+.nb-m{font-family:var(--fd);font-size:20px;font-weight:600;color:var(--white);letter-spacing:.5px}
+.nb-d{width:5px;height:5px;background:var(--gold);border-radius:50%;margin-bottom:2px;flex-shrink:0}
+.nb-s{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--silver2)}
+.nl{display:flex;align-items:center;gap:2rem}
+.nlk{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--silver2);transition:color .2s;cursor:pointer;border:none;background:none}
+.nlk:hover,.nlk.active{color:var(--gold)}
+.ncta{padding:8px 20px;background:var(--gold);color:var(--ink);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;border:none;border-radius:var(--r);transition:opacity .2s}
+.ncta:hover{opacity:.85}
+
+.page{display:none;min-height:100vh;padding-top:64px}
+.page.active{display:block}
+
+/* HOME */
+#ph{background:var(--ink)}
+.hero{min-height:calc(100vh - 64px);display:flex;flex-direction:column;justify-content:center;padding:6rem 3rem 4rem;position:relative;overflow:hidden}
+.hbg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 60% 50%,rgba(201,168,76,.06),transparent 70%);pointer-events:none}
+.hgr{position:absolute;inset:0;opacity:.03;background-image:linear-gradient(var(--gold) 1px,transparent 1px),linear-gradient(90deg,var(--gold) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.htag{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:12px}
+.htag::before{content:'';width:32px;height:1px;background:var(--gold)}
+.hh1{font-family:var(--fd);font-size:clamp(48px,7vw,96px);font-weight:500;line-height:1.0;color:var(--white);margin-bottom:1.5rem;max-width:900px}
+.hh1 em{font-style:italic;color:var(--gold)}
+.hsub{font-size:15px;color:var(--silver2);line-height:1.7;max-width:520px;margin-bottom:3rem}
+.ha{display:flex;gap:1rem;flex-wrap:wrap}
+.bg{padding:13px 28px;background:var(--gold);color:var(--ink);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;border:none;border-radius:var(--r);transition:all .2s;cursor:pointer}
+.bg:hover{background:var(--gold2);transform:translateY(-1px)}
+.bo{padding:13px 28px;background:transparent;color:var(--white);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:500;border:1px solid rgba(255,255,255,.2);border-radius:var(--r);transition:all .2s;cursor:pointer}
+.bo:hover{border-color:var(--gold);color:var(--gold)}
+.hst{display:flex;gap:3rem;margin-top:5rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,.06);flex-wrap:wrap}
+.sv{font-family:var(--fd);font-size:40px;font-weight:500;color:var(--gold);display:block}
+.sl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--silver);margin-top:4px}
+.stag{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:10px}
+.stag::before{content:'';width:24px;height:1px;background:var(--gold)}
+
+.astrip{background:var(--ink);color:var(--white);display:grid;grid-template-columns:1fr 1fr}
+.al{padding:6rem 3rem;border-right:1px solid rgba(255,255,255,.06)}
+.ar{padding:6rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-content:start}
+.vc{padding:1.5rem;border:1px solid rgba(201,168,76,.15);border-radius:var(--r)}
+.vcn{font-family:var(--fm);font-size:11px;color:var(--gold);margin-bottom:.75rem}
+.vct{font-size:14px;font-weight:600;color:var(--white);margin-bottom:.4rem}
+.vcb{font-size:12px;color:var(--silver);line-height:1.6}
+
+/* RESEARCH */
+#pr{background:var(--cream)}
+.rh{background:var(--ink);padding:4rem 3rem 3rem}
+.sb{display:flex;gap:.75rem;margin-top:2rem;max-width:600px}
+.si{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:11px 16px;color:var(--white);font-size:13px;outline:none;transition:border-color .2s}
+.si:focus{border-color:var(--gold)}
+.si::placeholder{color:var(--silver)}
+.sbtn{padding:11px 22px;background:var(--gold);color:var(--ink);font-size:11px;letter-spacing:2px;font-weight:600;border:none;border-radius:var(--r);cursor:pointer;white-space:nowrap;font-family:var(--fu)}
+.fb{padding:1.25rem 3rem;background:var(--cream2);border-bottom:1px solid var(--cream3);display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.flbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--silver);margin-right:.5rem}
+.ftb{padding:5px 14px;border:1px solid var(--cream3);border-radius:20px;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--silver);background:transparent;cursor:pointer;transition:all .15s;font-family:var(--fu)}
+.ftb:hover,.ftb.on{background:var(--ink);color:var(--gold);border-color:var(--ink)}
+.pg{padding:2.5rem 3rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem}
+.pc{background:var(--white);border:1px solid var(--cream3);border-radius:10px;padding:1.75rem;transition:all .25s;cursor:pointer;position:relative;overflow:hidden}
+.pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);transform:scaleY(0);transform-origin:bottom;transition:transform .3s}
+.pc:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(12,12,16,.1)}
+.pc:hover::before{transform:scaleY(1)}
+.pcs{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem}
+.pct{font-family:var(--fd);font-size:21px;font-weight:600;color:var(--ink);line-height:1.2;margin-bottom:.75rem}
+.pcx{font-size:13px;color:var(--silver);line-height:1.65;margin-bottom:1.25rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.pcm{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--silver2)}
+.ptgs{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:1rem}
+.ptg{font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:20px;background:var(--cream2);color:var(--silver);border:1px solid var(--cream3)}
+.pe{padding:5rem 3rem;text-align:center}
+.pe-t{font-family:var(--fd);font-size:28px;color:var(--silver);margin-bottom:.5rem}
+.pe-s{font-size:13px;color:var(--silver2)}
+
+/* SUBMIT */
+#ps{background:var(--cream)}
+.subh{background:var(--ink);padding:4rem 3rem 3rem}
+.fs{padding:3rem;max-width:760px;margin:0 auto}
+.fb2{margin-bottom:2rem}
+.fl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--silver);margin-bottom:8px;display:block}
+.fi,.fta,.fse{width:100%;background:var(--white);border:1px solid var(--cream3);border-radius:var(--r);padding:11px 14px;font-size:14px;color:var(--ink);outline:none;transition:border-color .2s}
+.fi:focus,.fta:focus,.fse:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.08)}
+.fta{resize:vertical;min-height:120px;line-height:1.6}
+.fse{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238C8C96' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.fse option{background:var(--white)}
+.tf{display:flex;flex-wrap:wrap;gap:.5rem}
+.ftag{font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:20px;border:1px solid var(--cream3);color:var(--silver);background:var(--white);cursor:pointer;transition:all .15s}
+.ftag.sel{background:var(--ink);color:var(--gold);border-color:var(--ink)}
+.dz{border:2px dashed var(--cream3);border-radius:8px;padding:2.5rem 2rem;text-align:center;cursor:pointer;transition:all .2s;position:relative;background:var(--white)}
+.dz:hover{border-color:var(--gold);background:rgba(201,168,76,.03)}
+.dz input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.dzt{font-size:13px;color:var(--silver);line-height:1.6}
+.dzn{font-family:var(--fm);font-size:12px;color:var(--gold);margin-top:.5rem;min-height:18px}
+.subbtn{width:100%;padding:15px;background:var(--ink);color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:600;border:2px solid var(--gold);border-radius:var(--r);cursor:pointer;transition:all .2s;margin-top:.5rem;font-family:var(--fu)}
+.subbtn:hover{background:var(--gold);color:var(--ink)}
+.fnote{font-size:11px;color:var(--silver);text-align:center;margin-top:1rem;line-height:1.6}
+.sbanner{background:rgba(30,120,70,.08);border:1px solid rgba(30,120,70,.25);border-radius:var(--r);padding:1.25rem 1.5rem;margin-bottom:2rem;display:none}
+.sbanner.show{display:block}
+.sbanner p{font-size:13px;color:#1A7040;line-height:1.6}
+
+/* ADMIN */
+#pa{background:var(--cream)}
+.alk{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 64px);text-align:center;padding:2rem}
+.alki{width:56px;height:56px;margin:0 auto 2rem;opacity:.25}
+.alk h2{font-family:var(--fd);font-size:36px;color:var(--ink);margin-bottom:.5rem}
+.alk p{font-size:13px;color:var(--silver);margin-bottom:2rem}
+.apw{display:flex;gap:.75rem;max-width:360px;width:100%}
+.api{flex:1;padding:11px 16px;border:1px solid var(--cream3);border-radius:var(--r);font-size:14px;outline:none;background:var(--white);transition:border-color .2s;color:var(--ink)}
+.api:focus{border-color:var(--gold)}
+.apb{padding:11px 20px;background:var(--ink);color:var(--gold);font-size:11px;letter-spacing:2px;border:none;border-radius:var(--r);cursor:pointer;white-space:nowrap;font-family:var(--fu)}
+.aerr{font-size:12px;color:#C44;margin-top:.75rem;min-height:18px}
+.apanel{padding:2rem 3rem}
+.atop{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--cream3)}
+.atitle{font-family:var(--fd);font-size:32px;color:var(--ink)}
+.abadge{font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:20px;background:var(--ink);color:var(--gold)}
+.qtabs{display:flex;gap:.5rem;margin-bottom:2rem}
+.qtab{padding:7px 18px;border:1px solid var(--cream3);border-radius:20px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--silver);background:transparent;cursor:pointer;transition:all .15s;font-family:var(--fu)}
+.qtab.active{background:var(--ink);color:var(--gold);border-color:var(--ink)}
+.acard{background:var(--white);border:1px solid var(--cream3);border-radius:10px;padding:1.75rem;margin-bottom:1.25rem}
+.actp{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1rem}
+.actitle{font-family:var(--fd);font-size:20px;font-weight:600;color:var(--ink);flex:1}
+.bpend{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:20px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);color:#9A7A20;white-space:nowrap;flex-shrink:0}
+.bappr{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:20px;background:rgba(30,120,70,.1);border:1px solid rgba(30,120,70,.3);color:#1A7040;white-space:nowrap;flex-shrink:0}
+.acmeta{font-size:12px;color:var(--silver2);display:flex;gap:1.5rem;margin-bottom:.75rem;flex-wrap:wrap}
+.acsum{font-size:13px;color:var(--silver);line-height:1.65;border-left:3px solid var(--cream3);padding-left:1rem;margin-bottom:1.25rem}
+.acact{display:flex;gap:.6rem;flex-wrap:wrap}
+.bapv{padding:8px 20px;background:rgba(30,120,70,.08);border:1px solid rgba(30,120,70,.3);color:#1A7040;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;border-radius:var(--r);cursor:pointer;transition:all .15s;font-family:var(--fu);font-weight:600}
+.bapv:hover{background:rgba(30,120,70,.2)}
+.brej{padding:8px 16px;background:rgba(180,40,40,.06);border:1px solid rgba(180,40,40,.25);color:#B02020;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;border-radius:var(--r);cursor:pointer;transition:all .15s;font-family:var(--fu);font-weight:600}
+.brej:hover{background:rgba(180,40,40,.15)}
+.eblank{text-align:center;padding:4rem;color:var(--silver);font-size:14px}
+
+/* CONTACT */
+#pc{background:var(--cream)}
+.ch{background:var(--ink);padding:5rem 3rem 4rem}
+.cg{display:grid;grid-template-columns:1fr 1fr}
+.cl{padding:4rem 3rem;background:var(--cream)}
+.cr{padding:4rem 3rem;background:var(--ink2);border-left:1px solid rgba(255,255,255,.06)}
+.cii{display:flex;gap:1rem;margin-bottom:2rem;align-items:flex-start}
+.cico{width:36px;height:36px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.2);border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cilbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--silver);margin-bottom:3px}
+.civ{font-size:14px;color:var(--ink);font-weight:500}
+.cift{font-family:var(--fd);font-size:28px;color:var(--white);margin-bottom:1.5rem}
+.ci,.cta{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:10px 14px;color:var(--white);font-size:13px;outline:none;transition:border-color .2s;margin-bottom:1rem;font-family:var(--fu)}
+.ci:focus,.cta:focus{border-color:var(--gold)}
+.ci::placeholder,.cta::placeholder{color:var(--silver)}
+.cta{resize:vertical;min-height:100px;line-height:1.6}
+.cbtn{width:100%;padding:12px;background:var(--gold);color:var(--ink);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;border:none;border-radius:var(--r);cursor:pointer;transition:opacity .2s;font-family:var(--fu)}
+.cbtn:hover{opacity:.85}
+
+footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.06);padding:2.5rem 3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.fbr{font-family:var(--fd);font-size:18px;color:var(--white)}
+.fcp{font-size:11px;color:var(--silver);letter-spacing:.5px}
+.fls{display:flex;gap:1.5rem}
+.flk{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--silver);cursor:pointer;transition:color .2s;border:none;background:none;font-family:var(--fu)}
+.flk:hover{color:var(--gold)}
+
+.modal-ov{position:fixed;inset:0;background:rgba(12,12,16,.85);z-index:200;display:none;align-items:center;justify-content:center;padding:2rem}
+.modal-ov.open{display:flex}
+.modal{background:var(--white);border-radius:12px;max-width:640px;width:100%;max-height:80vh;overflow-y:auto;padding:2.5rem;position:relative}
+.mcl{position:absolute;top:1.25rem;right:1.25rem;width:32px;height:32px;border:1px solid var(--cream3);border-radius:50%;background:none;cursor:pointer;font-size:14px;color:var(--silver);display:flex;align-items:center;justify-content:center;transition:all .15s;font-family:var(--fu)}
+.mcl:hover{background:var(--cream2);color:var(--ink)}
+.msc{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem}
+.mti{font-family:var(--fd);font-size:30px;font-weight:600;color:var(--ink);margin-bottom:1rem;line-height:1.2}
+.mme{font-size:12px;color:var(--silver2);margin-bottom:1.5rem;display:flex;gap:1rem;flex-wrap:wrap}
+.mbo{font-size:14px;color:var(--silver);line-height:1.75}
+.mtgs{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--cream3)}
+
+#toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink2);border:1px solid var(--gold);border-radius:8px;padding:12px 24px;font-size:13px;color:var(--gold2);letter-spacing:.3px;opacity:0;transition:all .3s;pointer-events:none;z-index:999;white-space:nowrap;font-family:var(--fu);max-width:90vw;text-align:center}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@keyframes fu{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.fu{animation:fu .5s ease forwards;opacity:0}
+.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}.d4{animation-delay:.55s}
+
+@media(max-width:768px){
+  nav{padding:0 1.25rem}.nl{gap:1rem}.nb-s{display:none}
+  .hero{padding:4rem 1.5rem 3rem}.hst{gap:2rem}
+  .astrip{grid-template-columns:1fr}.al{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);padding:4rem 1.5rem}.ar{padding:3rem 1.5rem}
+  .pg{padding:2rem 1.5rem;grid-template-columns:1fr}
+  .cg{grid-template-columns:1fr}.cr{border-left:none;border-top:1px solid rgba(255,255,255,.06)}
+  .apanel{padding:1.5rem}
+  footer{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nb" onclick="showPage(&#39;home&#39;)">
+    <span class="nb-m">Apex</span><div class="nb-d"></div><span class="nb-s">Research &amp; Ventures</span>
+  </div>
+  <div class="nl">
+    <button class="nlk active" data-page="home" onclick="showPage(&#39;home&#39;)">Home</button>
+    <button class="nlk" data-page="research" onclick="showPage(&#39;research&#39;)">Research</button>
+    <button class="nlk" data-page="contact" onclick="showPage(&#39;contact&#39;)">Contact</button>
+    <button class="nlk" data-page="admin" onclick="showPage(&#39;admin&#39;)" style="opacity:.4">Admin</button>
+    <button class="ncta" onclick="showPage(&#39;submit&#39;)">Submit Paper</button>
+  </div>
+</nav>
+
+<!-- HOME -->
+<div id="ph" class="page active">
+  <div class="hero">
+    <div class="hbg"></div><div class="hgr"></div>
+    <div class="htag fu d1">Apex Research and Ventures</div>
+    <h1 class="hh1 fu d2">Where <em>rigorous analysis</em><br>meets venture clarity.</h1>
+    <p class="hsub fu d3">A curated platform for high-caliber research in venture, markets, and emerging sectors. Every paper is editorially reviewed before publication.</p>
+    <div class="ha fu d4">
+      <button class="bg" onclick="showPage(&#39;research&#39;)">Browse Research</button>
+      <button class="bo" onclick="showPage(&#39;submit&#39;)">Submit Your Work</button>
+    </div>
+    <div class="hst fu d4">
+      <div><span class="sv" id="pubCount">0</span><span class="sl">Published Papers</span></div>
+      <div><span class="sv">7</span><span class="sl">Research Sectors</span></div>
+      <div><span class="sv">100%</span><span class="sl">Editorially Verified</span></div>
+    </div>
+  </div>
+
+  <div class="astrip">
+    <div class="al">
+      <div class="stag" style="color:var(--gold)">Our Mission</div>
+      <h2 style="font-family:var(--fd);font-size:clamp(26px,3.5vw,40px);font-weight:500;color:var(--white);line-height:1.15;margin-bottom:1.25rem">Built for the next generation of venture analysts.</h2>
+      <p style="font-size:14px;color:var(--silver2);line-height:1.75;margin-bottom:1.25rem">Apex Research and Ventures is a publishing platform for high school and early-career analysts to produce, verify, and distribute institutional-grade research.</p>
+      <p style="font-size:14px;color:var(--silver2);line-height:1.75">All submissions go through a formal editorial review before going live — every paper meets the Apex gold standard.</p>
+    </div>
+    <div class="ar">
+      <div class="vc"><div class="vcn">01</div><div class="vct">Editorial Rigor</div><div class="vcb">Every paper reviewed by Apex leadership before publication.</div></div>
+      <div class="vc"><div class="vcn">02</div><div class="vct">Sector Depth</div><div class="vcb">Fintech, Climate, AI, Healthcare, Consumer, Deep Tech &amp; more.</div></div>
+      <div class="vc"><div class="vcn">03</div><div class="vct">Open Access</div><div class="vcb">All approved research is publicly accessible — no paywalls.</div></div>
+      <div class="vc"><div class="vcn">04</div><div class="vct">Analyst Growth</div><div class="vcb">Publishing here builds a professional research record.</div></div>
+    </div>
+  </div>
+
+  <div style="padding:5rem 3rem;background:var(--cream2)">
+    <div class="stag">Latest Research</div>
+    <h2 style="font-family:var(--fd);font-size:clamp(30px,4vw,48px);font-weight:500;color:var(--ink);margin-bottom:2rem">Recently published.</h2>
+    <div id="homeLatest"><p style="color:var(--silver);font-size:14px">No published papers yet — check back soon.</p></div>
+    <div style="text-align:center;margin-top:2.5rem"><button class="bg" onclick="showPage(&#39;research&#39;)">View All Research →</button></div>
+  </div>
+
+  <div style="padding:5rem 3rem;background:var(--ink)">
+    <div class="stag">How It Works</div>
+    <h2 style="font-family:var(--fd);font-size:clamp(30px,4vw,48px);font-weight:500;color:var(--white);margin-bottom:3rem">From submission to publication.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem">
+      <div style="padding:1.75rem;border:1px solid rgba(255,255,255,.06);border-radius:8px"><div style="font-family:var(--fm);font-size:28px;color:var(--gold);margin-bottom:1rem;opacity:.5">01</div><div style="font-size:15px;font-weight:600;color:var(--white);margin-bottom:.5rem">Submit Your Paper</div><div style="font-size:13px;color:var(--silver);line-height:1.6">Upload your research, add an executive summary, tag by sector.</div></div>
+      <div style="padding:1.75rem;border:1px solid rgba(255,255,255,.06);border-radius:8px"><div style="font-family:var(--fm);font-size:28px;color:var(--gold);margin-bottom:1rem;opacity:.5">02</div><div style="font-size:15px;font-weight:600;color:var(--white);margin-bottom:.5rem">Review Request</div><div style="font-size:13px;color:var(--silver);line-height:1.6">Apex editorial receives an instant email with your full submission.</div></div>
+      <div style="padding:1.75rem;border:1px solid rgba(255,255,255,.06);border-radius:8px"><div style="font-family:var(--fm);font-size:28px;color:var(--gold);margin-bottom:1rem;opacity:.5">03</div><div style="font-size:15px;font-weight:600;color:var(--white);margin-bottom:.5rem">Editorial Approval</div><div style="font-size:13px;color:var(--silver);line-height:1.6">Leadership reviews and approves or declines via the Admin Panel.</div></div>
+      <div style="padding:1.75rem;border:1px solid rgba(255,255,255,.06);border-radius:8px"><div style="font-family:var(--fm);font-size:28px;color:var(--gold);margin-bottom:1rem;opacity:.5">04</div><div style="font-size:15px;font-weight:600;color:var(--white);margin-bottom:.5rem">Published Live</div><div style="font-size:13px;color:var(--silver);line-height:1.6">Approved papers appear immediately on the public Research Feed.</div></div>
+    </div>
+  </div>
+
+  <footer>
+    <span class="fbr">Apex Research &amp; Ventures</span>
+    <span class="fcp">© 2025 Apex Research and Ventures. All rights reserved.</span>
+    <div class="fls">
+      <button class="flk" onclick="showPage(&#39;research&#39;)">Research</button>
+      <button class="flk" onclick="showPage(&#39;submit&#39;)">Submit</button>
+      <button class="flk" onclick="showPage(&#39;contact&#39;)">Contact</button>
+    </div>
+  </footer>
+</div>
+
+<!-- RESEARCH -->
+<div id="pr" class="page">
+  <div class="rh">
+    <div class="stag">Public Research Feed</div>
+    <h1 style="font-family:var(--fd);font-size:clamp(36px,5vw,56px);font-weight:500;color:var(--white);margin-bottom:.5rem">Research Library</h1>
+    <p style="font-size:14px;color:var(--silver2);margin-bottom:1.5rem">All papers are editorially verified by Apex leadership before publication.</p>
+    <div class="sb">
+      <input class="si" id="searchInput" placeholder="Search by title, author, sector, or keyword..." oninput="renderPapers()">
+      <button class="sbtn" onclick="renderPapers()">Search</button>
+    </div>
+  </div>
+  <div class="fb">
+    <span class="flbl">Filter:</span>
+    <button class="ftb on" onclick="setFilter(&#39;All&#39;,this)">All</button>
+    <button class="ftb" onclick="setFilter(&#39;Fintech&#39;,this)">Fintech</button>
+    <button class="ftb" onclick="setFilter(&#39;Climate Tech&#39;,this)">Climate Tech</button>
+    <button class="ftb" onclick="setFilter(&#39;Healthcare&#39;,this)">Healthcare</button>
+    <button class="ftb" onclick="setFilter(&#39;AI / ML&#39;,this)">AI / ML</button>
+    <button class="ftb" onclick="setFilter(&#39;Consumer&#39;,this)">Consumer</button>
+    <button class="ftb" onclick="setFilter(&#39;Deep Tech&#39;,this)">Deep Tech</button>
+    <button class="ftb" onclick="setFilter(&#39;Real Estate&#39;,this)">Real Estate</button>
+  </div>
+  <div id="papersGrid" class="pg"></div>
+  <div id="papersEmpty" class="pe" style="display:none">
+    <div class="pe-t">No papers here yet.</div>
+    <div class="pe-s">Check back after editorial review — or <span style="color:var(--gold);cursor:pointer" onclick="showPage(&#39;submit&#39;)">submit your own research →</span></div>
+  </div>
+  <footer style="margin-top:2rem">
+    <span class="fbr">Apex Research &amp; Ventures</span>
+    <span class="fcp">© 2025 Apex Research and Ventures.</span>
+    <div class="fls">
+      <button class="flk" onclick="showPage(&#39;home&#39;)">Home</button>
+      <button class="flk" onclick="showPage(&#39;submit&#39;)">Submit</button>
+      <button class="flk" onclick="showPage(&#39;contact&#39;)">Contact</button>
+    </div>
+  </footer>
+</div>
+
+<!-- SUBMIT -->
+<div id="ps" class="page">
+  <div class="subh">
+    <div class="stag">Researcher Portal</div>
+    <h1 style="font-family:var(--fd);font-size:clamp(36px,5vw,56px);font-weight:500;color:var(--white);margin-bottom:.5rem">Submit Research</h1>
+    <p style="font-size:14px;color:var(--silver2)">Your submission enters a review queue. Once approved by Apex leadership it goes live on the public feed.</p>
+  </div>
+  <div class="fs">
+    <div class="sbanner" id="successBanner"><p><strong>Submission received.</strong> A review request has been sent to Apex editorial leadership. Your paper will appear on the public feed once approved.</p></div>
+    <div class="fb2"><label class="fl">Paper Title *</label><input class="fi" id="fTitle" placeholder="e.g. Venture Capital Allocation in Emerging Markets 2025"></div>
+    <div class="fb2"><label class="fl">Your Name *</label><input class="fi" id="fAuthor" placeholder="Full name"></div>
+    <div class="fb2"><label class="fl">Affiliation / School</label><input class="fi" id="fAffil" placeholder="e.g. Apex Research and Ventures, Princeton HS"></div>
+    <div class="fb2">
+      <label class="fl">Sector *</label>
+      <select class="fse" id="fSector">
+        <option value="">Select a sector...</option>
+        <option>Fintech</option><option>Climate Tech</option><option>Healthcare</option>
+        <option>AI / ML</option><option>Consumer</option><option>Deep Tech</option><option>Real Estate</option>
+      </select>
+    </div>
+    <div class="fb2"><label class="fl">Executive Summary *</label><textarea class="fta" id="fSummary" placeholder="Provide a concise 2–4 sentence summary of your key findings and thesis..."></textarea></div>
+    <div class="fb2">
+      <label class="fl">Research Tags</label>
+      <div class="tf">
+        <span class="ftag" onclick="this.classList.toggle(&#39;sel&#39;)">Macro</span>
+        <span class="ftag" onclick="this.classList.toggle(&#39;sel&#39;)">Equity</span>
+        <span class="ftag" onclick="this.classList.toggle(&#39;sel&#39;)">Policy</span>
+        <span class="ftag" onclick="this.classList.toggle(&#39;sel&#39;)">Consumer Behavior</span>
+        <span class="ftag" onclick="this.classList.toggle(&#39;sel&#39;)">Valuation</span>
+        <span class="ftag" onclick="this.classList.toggle(&#39;sel&#39;)">M&amp;A</span>
+        <span class="ftag" onclick="this.classList.toggle(&#39;sel&#39;)">IPO</span>
+        <span class="ftag" onclick="this.classList.toggle(&#39;sel&#39;)">ESG</span>
+        <span class="ftag" onclick="this.classList.toggle(&#39;sel&#39;)">Regulation</span>
+        <span class="ftag" onclick="this.classList.toggle(&#39;sel&#39;)">Emerging Markets</span>
+      </div>
+    </div>
+    <div class="fb2">
+      <label class="fl">Upload Research PDF (optional)</label>
+      <div class="dz">
+        <input type="file" accept=".pdf" id="fileInput" onchange="handleFile(this)">
+        <div class="dzt">Drop your PDF here or click to browse</div>
+        <div class="dzn" id="dzName"></div>
+      </div>
+    </div>
+    <button class="subbtn" onclick="submitPaper()">Verify &amp; Submit for Review →</button>
+    <p class="fnote">Upon submission, a review request is automatically sent to Apex editorial leadership.<br>Your paper will not be visible publicly until approved.</p>
+  </div>
+</div>
+
+<!-- ADMIN -->
+<div id="pa" class="page">
+  <div id="adminLock" class="alk">
+    <svg class="alki" viewBox="0 0 56 56" fill="none">
+      <rect x="10" y="26" width="36" height="24" rx="4" stroke="#C9A84C" stroke-width="2"></rect>
+      <path d="M18 26V20a10 10 0 0120 0v6" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"></path>
+      <circle cx="28" cy="38" r="3.5" fill="#C9A84C"></circle>
+    </svg>
+    <h2>Admin Access</h2>
+    <p>Enter administrative credentials to access the editorial dashboard.</p>
+    <div class="apw">
+      <input class="api" id="adminPass" type="password" placeholder="Enter passcode" onkeydown="if(event.key===&#39;Enter&#39;)checkAdmin()">
+      <button class="apb" onclick="checkAdmin()">Unlock</button>
+    </div>
+    <div class="aerr" id="adminErr"></div>
+  </div>
+  <div id="adminPanel" style="display:none">
+    <div class="apanel">
+      <div class="atop">
+        <div><div class="atitle">Editorial Dashboard</div><div style="font-size:12px;color:var(--silver);margin-top:.25rem">Apex Research and Ventures — Review Queue</div></div>
+        <span class="abadge">Editor-in-Chief</span>
+      </div>
+      <div class="qtabs">
+        <button class="qtab active" onclick="setTab(&#39;pending&#39;,this)">Pending <span id="cntP"></span></button>
+        <button class="qtab" onclick="setTab(&#39;approved&#39;,this)">Approved <span id="cntA"></span></button>
+      </div>
+      <div id="adminQueue"></div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="pc" class="page">
+  <div class="ch">
+    <div class="stag">Get In Touch</div>
+    <h1 style="font-family:var(--fd);font-size:clamp(40px,5vw,60px);font-weight:500;color:var(--white);margin-bottom:.5rem">Contact Us</h1>
+    <p style="font-size:14px;color:var(--silver2)">Questions, collaborations, or media inquiries — we'd love to hear from you.</p>
+  </div>
+  <div class="cg">
+    <div class="cl">
+      <h2 style="font-family:var(--fd);font-size:30px;color:var(--ink);margin-bottom:2rem">Reach the team.</h2>
+      <div class="cii">
+        <div class="cico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4l6 5 6-5M2 4h12v9H2V4z" stroke="#C9A84C" stroke-width="1.25" stroke-linejoin="round"></path></svg></div>
+        <div><div class="cilbl">Email</div><div class="civ">nirvansaha11@gmail.com</div></div>
+      </div>
+      <div class="cii">
+        <div class="cico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 3h2l1 3-1.5 1.5c1 2 2.5 3.5 4.5 4.5L10.5 10l3 1v2c0 .6-.5 1-1 .9C5.6 13.1 2.9 10.4 2.1 6 2 5.5 2.4 5 3 5V3z" stroke="#C9A84C" stroke-width="1.25" stroke-linejoin="round"></path></svg></div>
+        <div><div class="cilbl">Phone</div><div class="civ">475-467-4457</div></div>
+      </div>
+      <div class="cii">
+        <div class="cico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="7" r="2.5" stroke="#C9A84C" stroke-width="1.25"></circle><path d="M8 2C5.2 2 3 4.2 3 7c0 3.5 5 8 5 8s5-4.5 5-8c0-2.8-2.2-5-5-5z" stroke="#C9A84C" stroke-width="1.25"></path></svg></div>
+        <div><div class="cilbl">Location</div><div class="civ">United States</div></div>
+      </div>
+      <div style="margin-top:2rem;padding:1.5rem;background:var(--cream2);border-radius:8px;border-left:3px solid var(--gold)">
+        <div style="font-size:12px;color:var(--silver);line-height:1.7"><strong style="color:var(--ink)">Want to submit research?</strong><br>Use our <span style="color:var(--gold);cursor:pointer;font-weight:600" onclick="showPage(&#39;submit&#39;)">Submission Portal →</span></div>
+      </div>
+    </div>
+    <div class="cr">
+      <div class="cift">Send a message.</div>
+      <input class="ci" id="cName" placeholder="Your name">
+      <input class="ci" id="cEmail" placeholder="Your email">
+      <input class="ci" id="cSubject" placeholder="Subject">
+      <textarea class="cta" id="cMsg" placeholder="Your message..."></textarea>
+      <button class="cbtn" onclick="sendContact()">Send Message</button>
+    </div>
+  </div>
+  <footer>
+    <span class="fbr">Apex Research &amp; Ventures</span>
+    <span class="fcp">© 2025 Apex Research and Ventures. All rights reserved.</span>
+    <div class="fls">
+      <button class="flk" onclick="showPage(&#39;research&#39;)">Research</button>
+      <button class="flk" onclick="showPage(&#39;submit&#39;)">Submit</button>
+      <button class="flk" onclick="showPage(&#39;home&#39;)">Home</button>
+    </div>
+  </footer>
+</div>
+
+<!-- MODAL -->
+<div class="modal-ov" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="mcl" onclick="closeModal()">✕</button>
+    <div class="msc" id="mSec"></div>
+    <div class="mti" id="mTit"></div>
+    <div class="mme" id="mMet"></div>
+    <div class="mbo" id="mBod"></div>
+    <div class="mtgs" id="mTgs"></div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+const PASS='Nirvan#2805', KEY='arv_v3';
+let papers=[], fileRef=null, filterSector='All', adminTab='pending';
+
+function load(){try{const s=localStorage.getItem(KEY);papers=s?JSON.parse(s):[]}catch(e){papers=[]}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(papers))}catch(e){}}
+
+function showPage(p){
+  document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));
+  document.getElementById('p'+p[0]).classList.add('active');
+  document.querySelectorAll('.nlk').forEach(el=>el.classList.remove('active'));
+  const l=document.querySelector('.nlk[data-page="'+p+'"]');
+  if(l)l.classList.add('active');
+  window.scrollTo(0,0);
+  if(p==='research')renderPapers();
+  if(p==='home')renderHome();
+  if(p==='admin'&&document.getElementById('adminPanel').style.display!=='none')renderQueue();
+  updateCount();
+}
+
+function updateCount(){
+  const n=papers.filter(x=>x.status==='approved').length;
+  const el=document.getElementById('pubCount');
+  if(el)el.textContent=n;
+}
+
+function renderPapers(){
+  const grid=document.getElementById('papersGrid');
+  const empty=document.getElementById('papersEmpty');
+  const q=(document.getElementById('searchInput')||{}).value||'';
+  let list=papers.filter(x=>x.status==='approved');
+  if(filterSector!=='All')list=list.filter(x=>x.sector===filterSector);
+  if(q.trim()){
+    const ql=q.toLowerCase();
+    list=list.filter(x=>
+      x.title.toLowerCase().includes(ql)||
+      x.author.toLowerCase().includes(ql)||
+      (x.sector||'').toLowerCase().includes(ql)||
+      (x.summary||'').toLowerCase().includes(ql)||
+      (x.tags||[]).some(t=>t.toLowerCase().includes(ql))
+    );
+  }
+  list.sort((a,b)=>b.id-a.id);
+  if(!list.length){grid.innerHTML='';empty.style.display='block';return}
+  empty.style.display='none';
+  grid.innerHTML=list.map(x=>`
+    <div class="pc" onclick="openModal(${x.id})">
+      <div class="pcs">${e(x.sector)}</div>
+      <div class="pct">${e(x.title)}</div>
+      <div class="pcx">${e(x.summary)}</div>
+      <div class="pcm"><span>${e(x.author)}</span><span>${e(x.date)}</span></div>
+      ${x.tags&&x.tags.length?`<div class="ptgs">${x.tags.map(t=>`<span class="ptg">${e(t)}</span>`).join('')}</div>`:''}
+    </div>`).join('');
+}
+
+function setFilter(f,btn){
+  filterSector=f;
+  document.querySelectorAll('.ftb').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  renderPapers();
+}
+
+function renderHome(){
+  const el=document.getElementById('homeLatest');
+  if(!el)return;
+  const list=papers.filter(x=>x.status==='approved').sort((a,b)=>b.id-a.id).slice(0,3);
+  if(!list.length){el.innerHTML='<p style="color:var(--silver);font-size:14px">No published papers yet — check back soon.</p>';return}
+  el.innerHTML='<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem">'+
+    list.map(x=>`<div class="pc" onclick="showPage('research');setTimeout(()=>openModal(${x.id}),80)">
+      <div class="pcs">${e(x.sector)}</div><div class="pct">${e(x.title)}</div>
+      <div class="pcx">${e(x.summary)}</div>
+      <div class="pcm"><span>${e(x.author)}</span><span>${e(x.date)}</span></div></div>`).join('')+'</div>';
+}
+
+function openModal(id){
+  const x=papers.find(p=>p.id===id);if(!x)return;
+  document.getElementById('mSec').textContent=x.sector;
+  document.getElementById('mTit').textContent=x.title;
+  document.getElementById('mMet').innerHTML=`<span>By ${e(x.author)}</span>${x.affil?`<span>${e(x.affil)}</span>`:''}<span>${e(x.date)}</span>`;
+  document.getElementById('mBod').innerHTML=`<p>${e(x.summary)}</p>${x.file&&x.file!=='(no file)'?`<p style="margin-top:1rem;font-size:12px;color:var(--silver2);font-family:var(--fm)">Attached: ${e(x.file)}</p>`:''}`;
+  document.getElementById('mTgs').innerHTML=x.tags&&x.tags.length?x.tags.map(t=>`<span style="font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:20px;background:var(--cream2);color:var(--silver);border:1px solid var(--cream3)">${e(t)}</span>`).join(''):'';
+  document.getElementById('modal').classList.add('open');
+}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+
+function handleFile(inp){fileRef=inp.files[0];document.getElementById('dzName').textContent=fileRef?'Selected: '+fileRef.name:''}
+
+function submitPaper(){
+  const title=document.getElementById('fTitle').value.trim();
+  const author=document.getElementById('fAuthor').value.trim();
+  const sector=document.getElementById('fSector').value;
+  const summary=document.getElementById('fSummary').value.trim();
+  if(!title||!author||!sector||!summary){showToast('Please fill in all required fields.');return}
+  const affil=document.getElementById('fAffil').value.trim();
+  const tags=[...document.querySelectorAll('.ftag.sel')].map(t=>t.textContent);
+  const paper={
+    id:Date.now(),title,author,affil,sector,summary,tags,
+    file:fileRef?fileRef.name:'(no file)',
+    status:'pending',
+    date:new Date().toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'})
+  };
+  papers.push(paper);
+  save();
+  sendEmail(paper);
+  ['fTitle','fAuthor','fAffil','fSummary'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('fSector').value='';
+  document.querySelectorAll('.ftag').forEach(t=>t.classList.remove('sel'));
+  document.getElementById('dzName').textContent='';
+  document.getElementById('fileInput').value='';
+  fileRef=null;
+  const b=document.getElementById('successBanner');
+  b.classList.add('show');setTimeout(()=>b.classList.remove('show'),6000);
+  showToast('Submitted — review request sent to editorial team.');
+}
+
+function sendEmail(x){
+  const sub=encodeURIComponent('[ARV Review Request] '+x.title);
+  const body=encodeURIComponent(
+    'New research submission — Apex Research and Ventures\n\n'+
+    'Title: '+x.title+'\nAuthor: '+x.author+(x.affil?'\nAffiliation: '+x.affil:'')+
+    '\nSector: '+x.sector+'\nTags: '+(x.tags.join(', ')||'None')+'\nFile: '+x.file+'\n\n'+
+    'Executive Summary:\n'+x.summary+'\n\n---\nLog into the Admin Panel to approve or reject.\nID: '+x.id
+  );
+  window.open('mailto:nirvansaha11@gmail.com?subject='+sub+'&body='+body);
+}
+
+function checkAdmin(){
+  if(document.getElementById('adminPass').value===PASS){
+    document.getElementById('adminLock').style.display='none';
+    document.getElementById('adminPanel').style.display='block';
+    renderQueue();
+  } else {
+    document.getElementById('adminErr').textContent='Incorrect credentials. Access denied.';
+    document.getElementById('adminPass').value='';
+  }
+}
+
+function setTab(t,btn){
+  adminTab=t;
+  document.querySelectorAll('.qtab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderQueue();
+}
+
+function renderQueue(){
+  const el=document.getElementById('adminQueue');
+  const pending=papers.filter(x=>x.status==='pending');
+  const approved=papers.filter(x=>x.status==='approved');
+  document.getElementById('cntP').textContent=pending.length?'('+pending.length+')':'';
+  document.getElementById('cntA').textContent=approved.length?'('+approved.length+')':'';
+  const list=(adminTab==='pending'?pending:approved).sort((a,b)=>b.id-a.id);
+  if(!list.length){el.innerHTML='<div class="eblank">'+(adminTab==='pending'?'Queue is clear — no papers awaiting review.':'No approved papers yet.')+'</div>';return}
+  el.innerHTML=list.map(x=>`
+    <div class="acard">
+      <div class="actp">
+        <div class="actitle">${e(x.title)}</div>
+        <span class="${x.status==='pending'?'bpend':'bappr'}">${x.status==='pending'?'Pending':'Approved'}</span>
+      </div>
+      <div class="acmeta">
+        <span>By ${e(x.author)}</span>
+        ${x.affil?`<span>${e(x.affil)}</span>`:''}
+        <span>${e(x.sector)}</span><span>${e(x.date)}</span>
+        <span style="font-family:var(--fm);font-size:11px">${e(x.file)}</span>
+      </div>
+      <div class="acsum">${e(x.summary)}</div>
+      ${x.tags&&x.tags.length?`<div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem">${x.tags.map(t=>`<span style="font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:20px;background:var(--cream2);color:var(--silver);border:1px solid var(--cream3)">${e(t)}</span>`).join('')}</div>`:''}
+      <div class="acact">
+        ${x.status==='pending'
+          ?`<button class="bapv" onclick="approve(${x.id})">Approve &amp; Publish</button><button class="brej" onclick="reject(${x.id})">Reject</button>`
+          :`<button class="brej" onclick="unpublish(${x.id})">Unpublish</button>`}
+      </div>
+    </div>`).join('');
+}
+
+function approve(id){
+  const x=papers.find(p=>p.id===id);if(!x)return;
+  x.status='approved';save();renderQueue();updateCount();
+  showToast('"'+x.title.substring(0,45)+'..." published to feed.');
+}
+function reject(id){
+  papers=papers.filter(p=>p.id!==id);save();renderQueue();
+  showToast('Submission rejected and removed.');
+}
+function unpublish(id){
+  const x=papers.find(p=>p.id===id);if(!x)return;
+  x.status='pending';save();renderQueue();updateCount();
+  showToast('"'+x.title.substring(0,45)+'..." moved back to pending.');
+}
+
+function sendContact(){
+  const name=document.getElementById('cName').value.trim();
+  const email=document.getElementById('cEmail').value.trim();
+  const subject=document.getElementById('cSubject').value.trim();
+  const msg=document.getElementById('cMsg').value.trim();
+  if(!name||!email||!msg){showToast('Please fill in your name, email, and message.');return}
+  const sub=encodeURIComponent('[ARV Contact] '+(subject||'Inquiry from '+name));
+  const body=encodeURIComponent('From: '+name+'\nEmail: '+email+'\n\n'+msg);
+  window.open('mailto:nirvansaha11@gmail.com?subject='+sub+'&body='+body);
+  ['cName','cEmail','cSubject','cMsg'].forEach(id=>document.getElementById(id).value='');
+  showToast('Message sent!');
+}
+
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),4500);
+}
+
+function e(s){
+  if(!s)return'';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+load();updateCount();renderHome();
+</script>
+
+
+</body></html>
